@@ -11,11 +11,49 @@
     "Levels": {
       "m": "male",
       "f": "female"
+    },
+    "Annotations": {
+      "IsAbout": {
+        "TermURL": "nb:Sex",
+        "Label": "Sex"
+      },
+      "VariableType": "Categorical",
+      "Levels": {
+        "f": {
+          "TermURL": "snomed:248152002",
+          "Label": "Female"
+        },
+        "m": {
+          "TermURL": "snomed:248153007",
+          "Label": "Male"
+        }
+      },
+      "MissingValues": []
     }
   },
   "age": {
     "Description": "age of the participant",
-    "Units": "full year"
+    "Units": "full year",
+    "Annotations": {
+      "IsAbout": {
+        "TermURL": "nb:Age",
+        "Label": "Age"
+      },
+      "VariableType": "Continuous",
+      "Format": {
+        "TermURL": "nb:FromFloat",
+        "Label": "float"
+      },
+      "MissingValues": [
+        "n/a",
+        "N/A",
+        "na",
+        "NA",
+        "nan",
+        "NaN",
+        ""
+      ]
+    }
   },
   "handedness": {
     "Description": "handedness of the participant as reported by the participant",
@@ -42,13 +80,23 @@
     "Levels": {
       "high": "high engagement (EC in the dataset paper)",
       "low": "low engagement (PL in the dataset paper)"
-      }
-    },
+    }
+  },
   "missing_data": {
     "Description": "data types missing for each participant",
     "Levels": {
       "eye_tracking": "eye tracking",
       "sound": "audio recording"
+    }
+  },
+  "participant_id": {
+    "Description": "",
+    "Annotations": {
+      "IsAbout": {
+        "TermURL": "nb:ParticipantID",
+        "Label": "Participant ID"
+      },
+      "VariableType": "Identifier"
     }
   }
 }
